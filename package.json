@@ -1,0 +1,30 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanmedda/To-do-List-with-Firebase.git"
+  },
+  "keywords": [
+    "nodejs",
+    "firebase",
+    "scss",
+    "bootstrap",
+    "jQuery",
+    "js"
+  ],
+  "author": "Suman Medda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sumanmedda/To-do-List-with-Firebase/issues"
+  },
+  "homepage": "https://github.com/sumanmedda/To-do-List-with-Firebase#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
