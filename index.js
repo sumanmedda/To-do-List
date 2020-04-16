@@ -3,11 +3,7 @@ const app = express();
 
 const PORT = 4000;
 
-app.use('/demo', express.static(__dirname + '/public'));
-
-app.get("/", (req, res) => {
-    res.send("Suman Medda");
-})
+app.use('/', express.static(__dirname + '/public'));
 
 app.listen(PORT, () => {
     console.log(`Server is running on : http://localhost:${PORT}`);
