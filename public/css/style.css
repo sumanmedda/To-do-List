@@ -25,9 +25,10 @@ a:hover {
   text-decoration: none !important;
 }
 
-.li-list {
-  color: aqua !important;
-  margin-left: 217px !important;
+.mgt-list {
+  text-align: center;
+  color: burlywood !important;
+  margin-left: 3rem !important;
   padding-right: 27rem !important;
 }
 
