@@ -1,107 +1,23 @@
-body {
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/overlay.png"), url("../img/download.jpeg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: whitesmoke !important;
-}
-
-.navbar-brand:hover {
-  color: burlywood !important;
-}
-
-.listinfo {
-  padding-right: 8px !important;
-  padding-left: 5px !important;
-}
-
-a {
-  color: whitesmoke !important;
-}
-
-a:hover {
-  color: burlywood !important;
-  text-decoration: none !important;
-}
-
-.mgt-list {
+.heading {
   text-align: center;
-  color: burlywood;
-  margin-left: 2rem;
-  padding-right: 11rem;
-  padding-top: 10px;
+  margin-top: 40px;
 }
 
-.flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.flex-container > div {
-  background-color: transparent;
-  width: 105rem;
+.to-do-list {
   text-align: center;
-  -webkit-box-pack: left !important;
-      -ms-flex-pack: left !important;
-          justify-content: left !important;
+  margin-top: 10px;
 }
 
-h1 {
-  color: snow;
-}
-
-.mgt {
+#new-task {
   text-align: center;
-  margin-top: 2rem;
 }
 
-.btn-mgt {
-  color: whitesmoke !important;
-  background-color: red !important;
+.my-list-container {
+  text-align: center;
+  margin-top: 30px;
 }
 
-.btn-mgt:hover {
-  color: black !important;
-  background-color: crimson !important;
-}
-
-.textedit {
-  margin-top: 11px;
-}
-
-input {
-  margin-left: 2rem;
-  border-radius: 5px !important;
-  background-color: #ece0cf;
-  padding-left: 9px;
-}
-
-.btn-txt-mgt {
-  border-radius: 12px !important;
-}
-
-.btn-txt-mgt:hover {
-  color: burlywood;
-}
-
-.rembtn {
-  color: coral;
-  background-color: black;
-  border-radius: 2rem;
-  margin-left: 3rem;
-}
-
-.rembtn:hover {
-  color: black;
-  background-color: coral;
-}
-
-.bg-dark {
-  background-color: #343a4000 !important;
+.my-list-container .my-tasks-list {
+  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */

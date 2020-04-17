@@ -1,6 +1,21 @@
-@import "body&nav";
-@import "header";
+.heading{
+    text-align: center;
+    margin-top: 40px;
+}
 
-.bg-dark{
-    background-color: #343a4000 !important;
+.to-do-list{
+    text-align:center;
+    margin-top: 10px;
+}
+
+#new-task{
+    text-align: center;
+}
+
+.my-list-container{
+    text-align: center;
+    margin-top: 30px;
+    .my-tasks-list{
+        list-style-type:none;
+    }
 }
