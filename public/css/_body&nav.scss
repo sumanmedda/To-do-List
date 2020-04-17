@@ -1,12 +1,13 @@
 
 
 body{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url("../img/overlay.png"), url("../img/download.jpeg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    color: whitesmoke !important;
 }
 
 .navbar-brand{

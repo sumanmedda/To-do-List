@@ -4,9 +4,7 @@ $(document).ready(() => {
     //adding list from text box
     $('.buttons').click(() => {
         let mylist = $('#input').val();
-        let edit =('<li class="mgt-list" id="hidelist" style="text-align:left;!important">');
-        let button =('<button type="button" class="rembtn btn-sm" id="remtxt">-</button></li>');
-        $('#list').append(edit+mylist+button);
+        $('#list').append('<li class="mgt-list" id="hidelist" style="text-align:left;!important">' + mylist + '<button type="button" class="rembtn btn-sm" id="remtxt">-</button></li>');
         return false;
     });
     
