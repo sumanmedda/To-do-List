@@ -30,7 +30,19 @@ a {
 
 .mgt-list{
     text-align:center;
-    color:burlywood !important;
-    margin-left: 3rem !important;
-    padding-right: 27rem !important;
+    color:burlywood;
+    margin-left: 2rem;
+    padding-right: 11rem;
+    padding-top: 10px;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    >div{
+        background-color: transparent;
+        width: 105rem;
+        text-align: center;
+        justify-content: left !important;
+    }
+  }

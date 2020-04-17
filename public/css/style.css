@@ -27,9 +27,27 @@ a:hover {
 
 .mgt-list {
   text-align: center;
-  color: burlywood !important;
-  margin-left: 3rem !important;
-  padding-right: 27rem !important;
+  color: burlywood;
+  margin-left: 2rem;
+  padding-right: 11rem;
+  padding-top: 10px;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color: transparent;
+  width: 105rem;
+  text-align: center;
+  -webkit-box-pack: left !important;
+      -ms-flex-pack: left !important;
+          justify-content: left !important;
 }
 
 h1 {
@@ -38,7 +56,7 @@ h1 {
 
 .mgt {
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .btn-mgt {
@@ -68,6 +86,18 @@ input {
 
 .btn-txt-mgt:hover {
   color: burlywood;
+}
+
+.rembtn {
+  color: coral;
+  background-color: black;
+  border-radius: 2rem;
+  margin-left: 10rem;
+}
+
+.rembtn:hover {
+  color: black;
+  background-color: coral;
 }
 
 .bg-dark {

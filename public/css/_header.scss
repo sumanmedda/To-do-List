@@ -7,7 +7,7 @@ h1{
 
 .mgt{
     text-align:center;
-    margin-top: 6rem;
+    margin-top: 2rem;
 }
 
 .btn-mgt{
@@ -34,5 +34,16 @@ input{
     border-radius: 12px !important;
     &:hover{
         color: burlywood;
+    }
+}
+
+.rembtn{
+    color: coral;
+    background-color: black;
+    border-radius: 2rem;
+    margin-left: 10rem;
+    &:hover{
+        color: black;
+        background-color: coral;
     }
 }
