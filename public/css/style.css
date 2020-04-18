@@ -20,4 +20,8 @@
 .my-list-container .my-tasks-list {
   list-style-type: none;
 }
+
+.task-complete-checkbox:checked + span {
+  text-decoration: line-through;
+}
 /*# sourceMappingURL=style.css.map */

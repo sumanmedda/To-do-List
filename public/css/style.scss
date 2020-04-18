@@ -19,3 +19,7 @@
         list-style-type:none;
     }
 }
+
+.task-complete-checkbox:checked + span{
+    text-decoration: line-through;
+} 
