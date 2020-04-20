@@ -8,20 +8,44 @@
   margin-top: 10px;
 }
 
-#new-task {
+.new-task {
   text-align: center;
+  border-radius: 10px;
 }
 
 .my-list-container {
-  text-align: center;
   margin-top: 30px;
+  background-color: white;
 }
 
-.my-list-container .my-tasks-list {
+.my-tasks-list {
   list-style-type: none;
 }
 
 .task-complete-checkbox:checked + span {
   text-decoration: line-through;
+}
+
+body {
+  background-color: whitesmoke !important;
+}
+
+.todo {
+  border-radius: 10px;
+}
+
+.task-complete-button {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-left: 100%;
+}
+
+.span-text {
+  margin-left: 25px;
+}
+
+.task-complete-button {
+  background: transparent;
 }
 /*# sourceMappingURL=style.css.map */

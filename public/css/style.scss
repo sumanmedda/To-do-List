@@ -8,18 +8,41 @@
     margin-top: 10px;
 }
 
-#new-task{
+.new-task{
     text-align: center;
+    border-radius: 10px;
 }
 
 .my-list-container{
-    text-align: center;
     margin-top: 30px;
-    .my-tasks-list{
+    background-color: white;
+}
+
+.my-tasks-list{
         list-style-type:none;
-    }
 }
 
 .task-complete-checkbox:checked + span{
     text-decoration: line-through;
 } 
+
+body{
+    background-color: whitesmoke !important;
+}
+
+.todo{
+    border-radius: 10px;
+}
+
+.task-complete-button{
+    justify-content: end;
+    margin-left: 100%;
+}
+
+.span-text{
+    margin-left: 25px;
+}
+
+.task-complete-button{
+    background: transparent;
+}
