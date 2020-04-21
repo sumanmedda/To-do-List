@@ -1,48 +1,19 @@
-.heading{
+.input_box_title{
     text-align: center;
-    margin-top: 40px;
 }
 
-.to-do-list{
-    text-align:center;
-    margin-top: 10px;
-}
-
-.new-task{
+.input_box_task{
     text-align: center;
-    border-radius: 10px;
 }
 
-.my-list-container{
-    margin-top: 30px;
-    background-color: white;
+ul{
+    list-style: none;
 }
 
-.my-tasks-list{
-        list-style-type:none;
+.remBtn{
+    text-align: end;
 }
 
-.task-complete-checkbox:checked + span{
+.chbox:checked + span{
     text-decoration: line-through;
-} 
-
-body{
-    background-color: whitesmoke !important;
-}
-
-.todo{
-    border-radius: 10px;
-}
-
-.task-complete-button{
-    justify-content: end;
-    margin-left: 100%;
-}
-
-.span-text{
-    margin-left: 25px;
-}
-
-.task-complete-button{
-    background: transparent;
-}
+};

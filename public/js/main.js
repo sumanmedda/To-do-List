@@ -1,115 +1,100 @@
-// Firebase integration
+const inputBoxTitle = $('#input_box_title'); // stores the value of input_box_title into a variable
+const taskArrayTitle = []; // stores the values into an array
+const taskArrayTask = []; // stores the values into an array
 
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyDRkDB6cuID5hh6SWFdg0-ZCYsbuxLz-nk",
-        authDomain: "to-do-list-d70a0.firebaseapp.com",
-        databaseURL: "https://to-do-list-d70a0.firebaseio.com",
-        projectId: "to-do-list-d70a0",
-        storageBucket: "to-do-list-d70a0.appspot.com",
-        messagingSenderId: "452500715828",
-        appId: "1:452500715828:web:42066c1e5d5af340ca8d61"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    
-    $(document).ready(function() {
 
-        $('#add-Todo').on('click', () => {
-        // value of input box
-        const task = $('#new-task').val();
 
-        // storing database in variable database
-        let database = firebase.database();
-        
-        // store value of key into a variable
-        let key = database.ref().child("unfinished_task").push().key;
+$(document).ready(() =>{
 
-        // enter and updating in real time database
-        if(task != 0){
-            key;
-            let taskList = {
-                task: task,
-                key : key
-            };
+    // functions of add_title_button
+    $("#add_title_button").click(() =>{
 
-            let updates = {};
-            updates["/unfinished_task/" + key] = taskList;
-            database.ref().update(updates);
-   
+        // adding value of title input box into a variable
+        const taskTitle = inputBoxTitle.val();
+
+        // check if title input box is empty or not
+        if(taskTitle == ''){
+            alert('Please enter title first');
+            return false;
         };
 
-        // after input clear data
-            $('#new-task').val('');
-    
+        // check if input val is already in  array or not
+        if (taskArrayTitle.includes(taskTitle)){
+            alert('Title is already added please add some other title');
+            return false;
+        };
+
+        // adding title into an array
+        taskArrayTitle.push(taskTitle);
+
+        // clearing input textbox field
+        inputBoxTitle.val('');  
+
+        // appending into div
+        $(".list_container").append(
+            `<div class="" id="show_task_input">
+                <label>Title:</label>
+                <ul id="title">${taskTitle}</ul>
+                <label>Task:</label>
+                <input class="input_box_task" id="input_box_task" placeholder="Add items" />
+                <button id="add_task_button">+</button><br><br>
+                <label>Added Task:</label>
+                <ul id="tasks"></ul>
+                <hr>
+            </div>`
+        );
+
     });
-});
 
+    // functions of add_task_button
+    $(".list_container").on('click', '#add_task_button', function () {
 
+        // adding value of inputBoxTask into a variable
+        const taskList = $(this).parent().find('#input_box_task').val();
 
+        // check if task input box is empty
+        if (taskList == ''){
+            alert('Please add task');
+            return false;
+        };
 
-    // const addTodoBtn = $('#add-Todo'); // store add todo button element in variable
-    // const newTask = $('#new-task'); // store new task input element in variable
-    // const myTasklist = $('.my-tasks-list'); // store my task list element in variable
-    // const taskArray = []; // array to store all the task
+        // check if task exist in array or not
+        if (taskArrayTask.includes(taskList)){
+            alert('This task already exist');
+            return false;
+        };
 
-    // $(document).ready(() => {
-    //     addTodoBtn.on('click', () =>{
+        // adding value of index into array
+        taskArrayTask.push(taskList);
 
-    //         const task = newTask.val(); // store val of newTask input in task variable
+        // clearing input value
+        $(this).parent().find('#input_box_task').val('');
 
-    //         // clear input to avoid duplicate clicks
-    //         newTask.val('');
+        // storing task into a variable
+        const taskListContainer= $(this).parent().find('#tasks');
 
-    //         // check input empty
-    //         if (task == ''){
-    //             alert('Please add some task');
-    //             return;
-    //         }
+        // appending the value to list
+        taskListContainer.append(`<li><span>${taskList}</span><button class="remList" >DEL</button></li>`);
 
-    //         // check task already there in taskArray
-    //         // do not add task if in taskArray
-    //         if(taskArray.includes(task)){
-    //             alert('Task Already present');
-    //             return;
-    //         }
+    });
 
-    //         // add task to task array
-    //         taskArray.push(task);
+    
 
-    //         // checkbox for showing completed task & added class task-complete-checkbox
-    //         const checkBox = (`<input type="checkbox" class="task-complete-checkbox"/>`);
+    // remove task from task list
+    $('.list_container').on('click','.remList',function () {
 
-    //         // button for removing task from list & added class task-complete-button
-    //         const remBtn = (`<button class="task-complete-button"><i class="fa fa-trash-o"></i></button>`);
-
-    //         // append task to list
-    //         myTasklist.append(`<li class="task">${checkBox}<span class="span-text">${task}</span>${remBtn}<hr></li>`);
-            
-    //     });
-
-    //     // button is dynamically generated so we are using delegated event listner 'on'
-    //     // arrow function do not send the clicked element 
-    //     // always use normal function with delegated event 
-    //     $('.my-tasks-list').on('click','.task-complete-button', function()  {
-
-    //         //  we have to remove the parent li
-    //         const task = $(this).parent().find('span').html();
-
-    //         // delete task from taskArray
-    //         const index = taskArray.indexOf(task);
-    //         delete taskArray[index];
-
-    //         // remove the task by deleting the parent li
-    //         $(this).parent().remove();
         
-    //     });
+        // finding text
+        const deleteTask = $(this).parent().find("span").html();
+        
 
-    //     $('.my-tasks-list').on('click','.task-complete-checkbox', function() {
+        // finding value in index
+        const index = taskArrayTask.indexOf(deleteTask);
+        delete taskArrayTask[index];
+       
+        // delete task
+        $(this).parent().remove();
+   
+    });
 
-    //         // find the value of span
-    //         const taskSpan = $(this).parent().find('span');
-    //     });
-
-
-    // });
+});
